@@ -1,0 +1,187 @@
+// ─────────────────────────────────────────────────────────────────────────
+// PROJECT DATA
+// To add a demo video for any project: record a short screen capture
+// (15–30s works best), export as .mp4, and drop it in /public/media/
+// using the exact filename in `video` below. It will auto-appear on
+// hover (desktop) — no code changes needed. No video yet? The card
+// falls back to a clean icon tile automatically.
+// ─────────────────────────────────────────────────────────────────────────
+
+export const stats = [
+  { n: "20+", l: "Systems Shipped" },
+  { n: "500+", l: "SKUs / Assets Tracked" },
+  { n: "50+", l: "Daily Txns · 99% Acc." },
+  { n: "10+ hrs", l: "Saved Weekly" },
+  { n: "0", l: "Inventory Discrepancies" },
+];
+
+export const categories = [
+  {
+    id: "live",
+    title: "Live Production Systems",
+    note: "In active daily use",
+    icon: "Rocket",
+    projects: [
+      {
+        name: "SWAG Order Portal",
+        slug: "swag-order-portal",
+        desc: "Branch ordering portal for LAROUCHE stores creating Odoo Sales Orders directly, with barcode cart-add, warehouse rules and a bulk-approve admin dashboard.",
+        stack: ["FastAPI", "PostgreSQL", "Odoo API"],
+        url: "https://production.swag.sa",
+        icon: "Boxes",
+        video: "swag-order-portal.mp4",
+      },
+      {
+        name: "LAROUCHE POS",
+        slug: "larouche-pos",
+        desc: "Fast scan-and-sell point-of-sale replacing slow native Odoo POS, with cashier identity-based login and a speed-optimized checkout flow.",
+        stack: ["FastAPI", "PostgreSQL"],
+        url: "https://swagpos.vercel.app",
+        icon: "ShoppingCart",
+        video: "larouche-pos.mp4",
+      },
+      {
+        name: "SWAG Collections Dashboard",
+        slug: "collections-dashboard",
+        desc: "Odoo-integrated debt & collections system — full-ledger sync, customer credit scoring, WhatsApp reminders, GPS-tracked visits and an in-dashboard AI assistant.",
+        stack: ["React", "FastAPI", "Odoo XML-RPC"],
+        url: "https://crmswag1.vercel.app",
+        icon: "LineChart",
+        video: "collections-dashboard.mp4",
+      },
+      {
+        name: "SWAG Maintenance Control Center",
+        slug: "swag-maintenance",
+        desc: "CAFM-style maintenance/work-order system with multi-stage approval (requester → supervisor → purchase → finance) and auto-generated Odoo expense records.",
+        stack: ["React", "FastAPI", "Odoo API"],
+        url: "https://frontend-icck-two.vercel.app",
+        icon: "Wrench",
+        video: "swag-maintenance.mp4",
+      },
+      {
+        name: "Outfit VM Checklist",
+        slug: "outfit-vm-checklist",
+        desc: "Visual merchandising & maintenance workflow with 4-stage approval, WebRTC voice/video calls, bilingual Arabic/English UI and PDF service reports.",
+        stack: ["React", "FastAPI", "WebRTC"],
+        url: "https://tasks.laroche.sa",
+        icon: "ClipboardList",
+        video: "outfit-vm-checklist.mp4",
+      },
+      {
+        name: "Delivery Route Planner",
+        slug: "delivery-route-planner",
+        desc: "Pulls confirmed Odoo sale orders for manual route sequencing, driver assignment and live delivery tracking, with admin/warehouse/driver roles.",
+        stack: ["FastAPI", "React"],
+        url: "https://crmswag.vercel.app",
+        icon: "Truck",
+        video: "delivery-route-planner.mp4",
+      },
+      {
+        name: "Rent Contracts Tracker",
+        slug: "rent-tracker",
+        desc: "Rent contract management with Ejar PDF OCR extraction, a certification approval workflow, expiry timeline charts and cross-company team chat.",
+        stack: ["FastAPI", "PostgreSQL", "OCR"],
+        url: "https://rent.swag.sa",
+        icon: "FileText",
+        video: "rent-tracker.mp4",
+      },
+      {
+        name: "Retail Gold POS",
+        slug: "retail-gold",
+        desc: "Dedicated retail point-of-sale for the gold/jewelry business line, separate from the Bullion exhibition-ledger ERP.",
+        stack: ["React", "FastAPI"],
+        url: "https://goldpos.swag.sa",
+        icon: "Coins",
+        video: "retail-gold.mp4",
+      },
+      {
+        name: "HR Executive Analytics",
+        slug: "hr-analytics",
+        desc: "Arabic RTL group HR & payroll analytics across SWAG group companies — rebuilt from static HTML into a full React app with JWT auth and payslip generation.",
+        stack: ["React", "FastAPI", "PostgreSQL"],
+        url: "https://hr-analytics-react.vercel.app",
+        icon: "Users",
+        video: "hr-analytics.mp4",
+      },
+    ],
+  },
+  {
+    id: "tools",
+    title: "Tools & Automation",
+    note: "Self-initiated builds",
+    icon: "Wrench",
+    projects: [
+      {
+        name: "IR PDF Renamer",
+        slug: "ir-renamer",
+        desc: "Automatically renames scanned Inspection Request PDFs by IR reference and engineer's decision for a construction project — cuts manual document handling for the whole team.",
+        stack: ["React", "Tailwind CSS", "Vercel"],
+        url: "https://kabri-pdf-rename.vercel.app",
+        icon: "FileCode2",
+        video: "ir-renamer.mp4",
+      },
+      {
+        name: "OUTFIT Website",
+        slug: "outfit-site",
+        desc: "Public brand website rebuilt from static HTML into React with a full admin panel controlling every page, text, image and product — plus live visitor-source analytics.",
+        stack: ["React", "Tailwind CSS"],
+        url: "https://outfitsa.cc",
+        icon: "Globe",
+        video: "outfit-site.mp4",
+      },
+      {
+        name: "LAROUCHE Company Website",
+        slug: "laroche-website",
+        desc: "Corporate website for the LAROUCHE brand, deployed straight from his own git repository.",
+        stack: ["Git Deploy", "Static Site"],
+        url: "https://info.laroche.sa",
+        icon: "Building2",
+        video: "laroche-website.mp4",
+      },
+      {
+        name: "Budget System (نظام الموازنات)",
+        slug: "budget-system",
+        desc: "Arabic budgeting application (11,700+ lines) converted from a localStorage HTML tool into a full FastAPI + PostgreSQL backed system, with emergency recovery endpoints.",
+        stack: ["FastAPI", "PostgreSQL"],
+        url: "https://budget234.vercel.app",
+        icon: "Receipt",
+        video: "budget-system.mp4",
+      },
+    ],
+  },
+  {
+    id: "internal",
+    title: "Internal Systems",
+    note: "Private — company network only, no public link",
+    icon: "Lock",
+    projects: [
+      {
+        name: "SWAG Inventory Control Center",
+        slug: "swag-inventory",
+        desc: "Real-time asset & inventory dashboard across all SWAG branches with transfer requests, QR-based asset tracking and role/branch-scoped access.",
+        stack: ["React", "Tailwind CSS"],
+        url: null,
+        icon: "Boxes",
+        video: "swag-inventory.mp4",
+      },
+      {
+        name: "Timecard Analytics Dashboard",
+        slug: "timecard-analytics",
+        desc: "BioTime biometric attendance Excel-upload dashboard handling multi-branch holiday rules and dual-shift employee schedules.",
+        stack: ["React", "TypeScript", "FastAPI"],
+        url: null,
+        icon: "Clock",
+        video: "timecard-analytics.mp4",
+      },
+      {
+        name: "SWAG Odoo Admin Toolkit",
+        slug: "odoo-admin-toolkit",
+        desc: "Admin tool for health checks, config management, bulk data fixes and exploring the company's live Odoo ERP instance.",
+        stack: ["React", "FastAPI"],
+        url: null,
+        icon: "Settings2",
+        video: "odoo-admin-toolkit.mp4",
+      },
+    ],
+  },
+];
